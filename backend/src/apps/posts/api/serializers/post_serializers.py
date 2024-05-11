@@ -1,12 +1,14 @@
 from rest_framework import serializers
 
-from apps.accounts.models import User
+from apps.posts.models import Posts
 
 
-class UserSerializer(serializers.ModelSerializer):
+class PostsSerializer(serializers.ModelSerializer):
     class Meta:
-        model = User
-        fields = ["id", "email", "username", "about_me", "date_added", "photo"]
+        model = Posts
+        exclude = [
+            "user",
+        ]
 
     def get_photo(self, obj):
         if obj.photo and hasattr(obj.photo, "url"):

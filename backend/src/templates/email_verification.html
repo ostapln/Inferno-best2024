@@ -1,0 +1,11 @@
+{% autoescape off %}
+
+Hi, {{ user.username }}
+<br>
+Thank you for registering at {{ domain }}.
+<br>
+Please verify your account by clicking the link below:
+<br>
+<a href="http://{{ domain }}{% url 'email-verification' uidb64=uid token=token %}">Verify Account</a>
+
+{% endautoescape %}
