@@ -1,33 +1,47 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+ 
 import './App.css'
+import { Route, Routes } from 'react-router-dom'
+import DefaultLayout from './layouts/DefaultLayout'
+import Register from './pages/auth/register/Register'
+import Login from './pages/auth/login/Login'
 
 function App() {
-  const [count, setCount] = useState(0)
+ 
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      
+ 
+    <div>
+      <Routes>
+
+        <Route path="/" element={<DefaultLayout />}  >
+        <Route index element={<Register />} />
+           {/*  <Route path="needs" element={<NeedsHelps />} />
+          <Route path="reg" element={<Register />} /> */}
+          <Route path="log" element={<Login />} />
+
+          {/* <Route path="profile" element={<ProfileWho />}> 
+          <Route index element={<Settings />}  />
+          <Route path="/profile/history" element={<History />} />
+          <Route path="/profile/password" element={<Password />} />
+          
+          </Route>
+          <Route path="profileHelp" element={<ProfileHelp/>}> 
+          <Route index element={<Settings />}  />
+          <Route path="/profileHelp/history" element={<History />} />
+          <Route path="/profileHelp/password" element={<Password />} />
+ 
+          </Route>
+          <Route path="add" element={<CreateNeeds/>}> 
+          </Route>
+          <Route path="post" element={<     PostNeeds/>}> 
+          </Route>
+          <Route path="edit" element={<EditNeeds/>}>  
+          </Route>*/}
+        </Route>
+      </Routes>
+    </div>
     </>
   )
 }
