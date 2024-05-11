@@ -4,7 +4,7 @@ import Header from "../pages/header/Header";
   
  
  
-const DefaultLayout = () => {
+const UserLayout = () => {
  
   return (
     <div className="dark:bg-body dark:text-bodydark ">
@@ -17,7 +17,10 @@ const DefaultLayout = () => {
           className="relative flex flex-1 flex-col overflow-y-hidden overflow-x-hidden default-custom-scrollbar"
         >
           
-       
+          {/* <!-- ===== Header Start ===== --> */}
+          <Header />
+          {/* <!-- ===== Header End ===== --> */}
+
           {/* <!-- ===== Main Content Start ===== --> */}
           <main className="bg-body">
             <div className="mx-auto">
@@ -32,4 +35,4 @@ const DefaultLayout = () => {
    
   );
 };
-export default DefaultLayout;
+export default UserLayout;
