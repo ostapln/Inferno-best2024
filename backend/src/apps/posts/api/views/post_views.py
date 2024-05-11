@@ -6,7 +6,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from apps.posts.api.serializers.post_serializers import PostsSerializer
-from apps.posts.api.serializers.comment_serializers import CommentsSerialiser
+from apps.posts.api.serializers.comment_serializers import CommentsSerializer
 from apps.posts.models import Posts
 from apps.posts.permissions import PostExists
 from apps.posts.repositories.post_repository import PostRepository
