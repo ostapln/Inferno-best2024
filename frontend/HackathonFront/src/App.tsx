@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom'
 import DefaultLayout from './layouts/DefaultLayout'
 import Register from './pages/auth/register/Register'
 import Login from './pages/auth/login/Login'
+import HomePage from './pages/home/HomePage'
 
 function App() {
  
@@ -16,9 +17,9 @@ function App() {
       <Routes>
 
         <Route path="/" element={<DefaultLayout />}  >
-        <Route index element={<Register />} />
-           {/*  <Route path="needs" element={<NeedsHelps />} />
-          <Route path="reg" element={<Register />} /> */}
+        <Route index element={<HomePage />} />
+           {/*  <Route path="needs" element={<NeedsHelps />} />*/}
+          <Route path="reg" element={<Register />} /> 
           <Route path="log" element={<Login />} />
 
           {/* <Route path="profile" element={<ProfileWho />}> 
