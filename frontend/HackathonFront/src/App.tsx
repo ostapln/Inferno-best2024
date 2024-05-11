@@ -6,7 +6,10 @@ import Register from './pages/auth/register/Register'
 import Login from './pages/auth/login/Login'
 import HomePage from './pages/home/HomePage'
 import UserLayout from './layouts/UserLayout'
-
+import { Profile } from './pages/profile/Profile'
+import Settings from './pages/profile/settings/Settings'
+import { Suspense } from 'react'
+import  {  profileRoutes } from './routes/index.ts';
 function App() {
  
 
@@ -42,12 +45,11 @@ function App() {
           <Route path="edit" element={<EditNeeds/>}>  
           </Route>*/}
         </Route>
-        <Route path="/userlayout" element={<UserLayout />}  >
-        {/* <Route index element={<HomePage />} />
-        
-          {/* <Route path="reg" element={<Register />} /> 
-          <Route path="log" element={<Login />} />  */}
-</Route>
+       
+         <Route path="/profile" element={<Profile />}   >
+         <Route index element={<Settings />}   />
+         </Route>
+  
       </Routes>
     </div>
     </>

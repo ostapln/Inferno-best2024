@@ -14,7 +14,7 @@ const UserLayout = () => {
         {/* <!-- ===== Content Area Start ===== --> */}
         <div
 
-          className="relative flex flex-1 flex-col overflow-y-hidden overflow-x-hidden default-custom-scrollbar"
+          className="relative flex flex-1 flex-row overflow-y-hidden overflow-x-hidden default-custom-scrollbar"
         >
           
           {/* <!-- ===== Header Start ===== --> */}
