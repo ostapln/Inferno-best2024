@@ -5,11 +5,12 @@ import DefaultLayout from './layouts/DefaultLayout'
 import Register from './pages/auth/register/Register'
 import Login from './pages/auth/login/Login'
 import HomePage from './pages/home/HomePage'
-import UserLayout from './layouts/UserLayout'
+ 
+ 
 import { Profile } from './pages/profile/Profile'
 import Settings from './pages/profile/settings/Settings'
-import { Suspense } from 'react'
-import  {  profileRoutes } from './routes/index.ts';
+import HistoryProfile from './pages/profile/history/HistoryProfile'
+ 
 function App() {
  
 
@@ -48,6 +49,8 @@ function App() {
        
          <Route path="/profile" element={<Profile />}   >
          <Route index element={<Settings />}   />
+         <Route path="/profile/history" element={<HistoryProfile />} />
+          {/* <Route path="/profile/password" element={<Password />} /> */}
          </Route>
   
       </Routes>

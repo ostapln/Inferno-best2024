@@ -24,7 +24,7 @@ import Header from '../header/Header';
               <div className="flex flex-grow items-center justify-flex-start py-4     ">
 
                   <a href="/profile" className="font-medium text-[20px] mx-4 text-black-600 underline dark:text-black-500 hover:no-underline">Налаштування</a>
-                  <a href="/profile/history" className="font-medium text-[20px] text-black-600 underline dark:text-black-500 hover:no-underline">Історя моїх платежів</a>
+                  <a href="/profile/history" className="font-medium text-[20px] text-black-600 underline dark:text-black-500 hover:no-underline">Моя iсторя</a>
                    
               </div>
                   <div className="flex flex-col  top-[70px] left-[47%]"> <img
