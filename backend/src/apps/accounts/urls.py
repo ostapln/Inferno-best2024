@@ -1,5 +1,4 @@
-from django.conf.urls.static import static
-from django.urls import include, path
+from django.urls import path
 from rest_framework.routers import DefaultRouter
 from rest_framework_simplejwt.views import TokenRefreshView, TokenVerifyView
 
@@ -15,13 +14,8 @@ urlpatterns = [
         name="change-password",
     ),
     path("delete-account/", auth_views.DeleteUserView.as_view(), name="delete-account"),
-    path('email-verification/<str:uidb64>/<str:token>/', auth_views.ActivateView.as_view(), name='email-verification'),
-    path('password-reset/', auth_views.CheckResetUserPasswordEmailView.as_view(), name='reset-password'),
-    path('password-reset/<str:uidb64>/<str:token>/', auth_views.PasswordResetView.as_view(), name='reset-user-password'),
-
     # User info
     path("me/", self_views.SelfView.as_view(), name="me"),
-    
     # JWT
     path("jwt/create/", auth_views.MyTokenObtainPairView.as_view(), name="jwt-create"),
     path("jwt/refresh/", TokenRefreshView.as_view(), name="token-refresh"),
