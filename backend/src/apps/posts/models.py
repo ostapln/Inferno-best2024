@@ -10,7 +10,7 @@ class Posts(models.Model):
 
     title = models.CharField(_("title"), max_length=128, blank=False, null=False)
     body = models.TextField(_("body"), null=True, blank=True)
-    region = models.CharField(_("region"), max_length=128, blank=True, null=True)
+    region = models.TextField(_("region"), blank=True, null=True)
     detail_info = models.TextField(_("detail_info"), blank=True, null=True)
     creator_email = models.EmailField(_("creator_email"))
     creator_contact_information = models.CharField(
