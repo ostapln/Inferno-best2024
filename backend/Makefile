@@ -6,6 +6,9 @@ setup:
 build:
 	sudo docker-compose build
 
+up-d:
+	sudo docker-compose up -d
+
 run:
 	sudo docker-compose up
 
