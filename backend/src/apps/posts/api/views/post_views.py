@@ -66,7 +66,7 @@ class PostDetailView(APIView):
             )
 
         post_serializer = PostsSerializer(post)
-        comment_serializer = CommentsSerialiser(comments)
+        comment_serializer = CommentsSerializer(comments)
 
         data = {
             "post": post_serializer.data,
