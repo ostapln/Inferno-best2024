@@ -56,7 +56,8 @@ class PostDetailView(APIView):
     permission_classes = [IsAuthenticatedOrReadOnly]
 
     def get(self, request, pk):
-        post = get_object_or_404(Posts, pk=pk)
+        post = PostRepository.get_some_post(pk=pk)
+        # post = get_object_or_404(Posts, pk=pk)
         comments = CommentRepository.get_comments_by_post(post=post)
 
         if post.user != request.user:

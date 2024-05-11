@@ -15,6 +15,10 @@ class PostRepository:
     @staticmethod
     def post_exists_by_pk(pk):
         return Posts.objects.filter(pk=pk).exists()
+    
+    @staticmethod
+    def get_some_post(pk):
+        return Posts.objects.get(pk=pk)
 
     @staticmethod
     def search_posts(query):
