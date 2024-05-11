@@ -5,8 +5,9 @@ password: string;
 }
 
 export interface ILoginResult {
-  userId:string;
   tokens: ITockens ;
+  userId:string;
+
 }
 export interface ITockens {
   access:string;

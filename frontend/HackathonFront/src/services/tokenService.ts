@@ -7,19 +7,21 @@ import { store } from '../store';
  
  
 
-export const storeToken = (token: string) => {
+export const storeToken = async (token:any) => {
   console.log('store token');
   localStorage.setItem('token', `Bearer ${token}`);
   http_api.defaults.headers['Authorization'] = getToken();
-  const user: IUser = jwtDecode(token);
+  console.log("tokens" , token);
+  const user = (await http_api.get<IUser>('/api/v1/users/me/', token)).data;
+     
+  console.log("user" , user);
   store.dispatch({
     type: AuthUserActionType.LOGIN_USER,
     payload: {
       email: user.email,
-      fullName: user.fullName,
-      description:user.description,
-       roles: user.roles,
+      username: user.username,
       userId: user.userId,
+      photo:user.photo,
     },
   });
 };
@@ -34,9 +36,8 @@ export const loadTokenFromStorage = () => {
     type: AuthUserActionType.LOGIN_USER,
     payload: {
       email: user.email,
-      fullName: user.fullName,
-     description:user.description,
-       roles: user.roles,
+      username: user.username,
+      photo:user.photo,
       userId: user.userId,
     },
   });
@@ -62,21 +63,9 @@ export const decodeToken = (token: string) => {
   return jwtDecode(token);
 };
 
-export const isAdmin = (user: IUser | undefined): boolean => {
-  return (
-    user != null &&
-    user.roles != null &&
-    (user?.roles as string[]).find((r) => r == 'Administrator') != null
-  );
-};
+ 
 
-export const isUnverified = (user: IUser | undefined): boolean => {
-  return (
-    user != null &&
-    user.roles != null &&
-    (user?.roles as string[]).find((r) => r == 'Unverified') != null
-  );
-};
+ 
 
  
 export const isSignedIn = (): boolean => {

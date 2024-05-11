@@ -17,7 +17,7 @@ const HomePage =()=>{
             
             <div className="fixed mx-[25rem] my-80 items-center justify-between py-4 px-20 md:px-6 2xl:px-11">
       
-      <a href="/userlayout" className="  h-[Hug (72px)px] block  w-full my-12 px-[25px]   py-5 bg-[#C60914] border-[2px] border-[solid] border-[#FEFCF4]   rounded-[4px] text-center text-sm font-semibold text-black   hover:bg-[#FEFCF4] hover:text-[#5BC0EB] hover:border-[#5BC0EB]   focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"><p className="text-[25px] ">перейти в застосунок</p></a>
+      <a href="/log" className="  h-[Hug (72px)px] block  w-full my-12 px-[25px]   py-5 bg-[#C60914] border-[2px] border-[solid] border-[#FEFCF4]   rounded-[4px] text-center text-sm font-semibold text-black   hover:bg-[#FEFCF4] hover:text-[#5BC0EB] hover:border-[#5BC0EB]   focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"><p className="text-[25px] ">перейти в застосунок</p></a>
         </div>
             </div>
 

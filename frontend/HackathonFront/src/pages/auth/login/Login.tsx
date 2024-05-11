@@ -19,22 +19,19 @@ const Login = () => {
 
 
 
-  const { isAuth } = useSelector((store: any) => store.auth as IAuthUser);
+  const { isAuth,user } = useSelector((store: any) => store.auth as IAuthUser);
   const onFormSubmit = async (values: ILoginRequest) => {
     try {
       console.log("values", values);
-
-
-
-
       const result = (await http_api.post<ILoginResult>('/api/v1/users/login/', values)).data.tokens.access;
       console.log("token", result);
-
+console.log("isAuth",isAuth );
       storeToken(result);
 
-      navigator('/');
-    } catch (error) {
-    } finally {
+      navigator('/profile');
+    }   catch (error: any) { // Вказання типу як any, або типу об'єкта помилки, якщо він відомий
+      console.error('Error status code:', error.response?.status); // Вивести статус код помилки
+       } finally {
       setIsLoading(() => false);
     }
 

@@ -5,8 +5,12 @@ import DefaultLayout from './layouts/DefaultLayout'
 import Register from './pages/auth/register/Register'
 import Login from './pages/auth/login/Login'
 import HomePage from './pages/home/HomePage'
-import UserLayout from './layouts/UserLayout'
-
+ 
+ 
+import { Profile } from './pages/profile/Profile'
+import Settings from './pages/profile/settings/Settings'
+import HistoryProfile from './pages/profile/history/HistoryProfile'
+ 
 function App() {
  
 
@@ -42,12 +46,13 @@ function App() {
           <Route path="edit" element={<EditNeeds/>}>  
           </Route>*/}
         </Route>
-        <Route path="/userlayout" element={<UserLayout />}  >
-        {/* <Route index element={<HomePage />} />
-        
-          {/* <Route path="reg" element={<Register />} /> 
-          <Route path="log" element={<Login />} />  */}
-</Route>
+       
+         <Route path="/profile" element={<Profile />}   >
+         <Route index element={<Settings />}   />
+         <Route path="/profile/history" element={<HistoryProfile />} />
+          {/* <Route path="/profile/password" element={<Password />} /> */}
+         </Route>
+  
       </Routes>
     </div>
     </>
