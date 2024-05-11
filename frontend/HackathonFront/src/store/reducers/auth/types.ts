@@ -13,13 +13,10 @@ export interface IAuthUser {
 
 export interface IUser {
   email: string;
-  fullName: string;
- 
- 
-  description: string;
- 
-  roles: string[];
+  username: string;
+  photo:string;
   userId: number;
+  
 }
  
  

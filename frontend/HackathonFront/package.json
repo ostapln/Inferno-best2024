@@ -2,7 +2,7 @@
   "name": "hackathonfront",
   "private": true,
   "version": "1.0.5",
-    "type": "module",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -14,6 +14,7 @@
     "@types/jwt-decode": "^3.1.0",
     "axios": "^1.6.8",
     "formik": "^2.4.6",
+    "http-proxy-middleware": "^3.0.0",
     "jwt-decode": "^4.0.0",
     "react": "^18.3.0",
     "react-dom": "^18.3.0",
@@ -36,5 +37,5 @@
     "typescript": "^5.2.2",
     "vite": "^5.2.0"
   },
-    "proxy": "http://198.46.226.156"
+  "proxy": "http://198.46.226.156"
 }

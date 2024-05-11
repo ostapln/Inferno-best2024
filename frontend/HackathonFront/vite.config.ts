@@ -1,8 +1,7 @@
 import { defineConfig } from 'vite';
-  
-
+ 
 export default defineConfig({
-     
+    // ваші інші налаштування
     server: {
         port: 5174,
         proxy: {

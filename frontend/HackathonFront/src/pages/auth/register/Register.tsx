@@ -32,7 +32,7 @@ const Register =()=>{
           'Content-Type': 'multipart/form-data',
         },
       })).data.tokens.access;
-
+      console.log("token", result);
     
       storeToken(result );
  
