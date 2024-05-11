@@ -17,6 +17,7 @@ THIRD_PARTY = [
 
 LOCAL_APPS = [
     "apps.accounts",
+    "apps.posts",
 
 ]
 

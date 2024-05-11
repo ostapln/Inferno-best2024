@@ -18,7 +18,7 @@ class UserAuthSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ["username", "email", "password1", "password2", "type"]
+        fields = ["username", "email", "password1", "password2"]
 
     def validate_email(self, value):
         if UserRepository.user_exists_by_email(value):
@@ -30,10 +30,6 @@ class UserAuthSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError("This username is already in use.")
         return value
 
-    def validate_type(self, value):
-        if value not in ["assistants", "recipients"]:
-            raise serializers.ValidationError("Type must be assistants or recipients.")
-        return value
 
     def validate(self, data):
         if data["password1"] != data["password2"]:
@@ -53,7 +49,6 @@ class UserAuthSerializer(serializers.ModelSerializer):
             username=validated_data["username"],
             email=validated_data["email"],
             password=validated_data["password"],
-            type=validated_data["type"],
         )
 
 

@@ -9,9 +9,7 @@ from apps.accounts.managers.user_manager import CustomUserManager
 
 
 class User(AbstractBaseUser, PermissionsMixin):
-    class TYPE(models.TextChoices):
-        ASSISTANTS = "assistants", _("Assistants")
-        RECIPIENTS = "recipients", _("Recipients")
+
 
     id = models.UUIDField(
         primary_key=True, default=uuid.uuid4, editable=False, db_index=True
@@ -21,7 +19,6 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     username = models.CharField(_("username"), max_length=150, unique=True)
     about_me = models.TextField(_("about_me"), blank=True, null=True)
-    type = models.CharField(_("Type"), max_length=12, choices=TYPE.choices, blank=False)
     date_added = models.DateTimeField(auto_now_add=True)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
