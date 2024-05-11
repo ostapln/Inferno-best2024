@@ -47,7 +47,7 @@ export const getToken = () => {
 const token =  localStorage.getItem('token')  ;
   console.log("dsad",token);
   
-  return token;
+  return token ? String(token) : '';
 };
 
 export const removeToken = () => {
