@@ -36,7 +36,7 @@ import Header from '../header/Header';
                       {/* channel info */}
                       <div className="text">
                           {/* Channel title */}
-                          <h1 className="text-black text-left font-bold my-8  text-3xl mb-2">Олександр Солти</h1>
+                          <h1 className="text-black text-left font-bold my-8  text-3xl mb-2">{user?.username}</h1>
 
                       </div>
 
@@ -52,7 +52,7 @@ import Header from '../header/Header';
                  
                   </div>
               </div>
-              <div className="flex my-12  main-content">
+              <div className="w-full flex my-12  main-content">
                       <Outlet></Outlet>
                   </div> 
 
