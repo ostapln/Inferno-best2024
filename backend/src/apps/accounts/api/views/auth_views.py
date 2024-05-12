@@ -8,7 +8,10 @@ from rest_framework.views import APIView
 from rest_framework_simplejwt.views import TokenObtainPairView
 
 from apps.accounts.api.serializers.auth_serializers import (
-    ChangePasswordSerializer, MyTokenObtainPairSerializer, UserAuthSerializer)
+    ChangePasswordSerializer,
+    MyTokenObtainPairSerializer,
+    UserAuthSerializer,
+)
 from apps.accounts.services.generate_token import create_jwt_pair_for_user
 
 

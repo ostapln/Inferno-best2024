@@ -1,16 +1,15 @@
 from django.shortcuts import get_object_or_404
 from rest_framework import status
-from rest_framework.permissions import (IsAuthenticated,
-                                        IsAuthenticatedOrReadOnly)
+from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnly
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from apps.posts.api.serializers.post_serializers import PostsSerializer
 from apps.posts.api.serializers.comment_serializers import CommentsSerializer
+from apps.posts.api.serializers.post_serializers import PostsSerializer
 from apps.posts.models import Posts
 from apps.posts.permissions import PostExists
-from apps.posts.repositories.post_repository import PostRepository
 from apps.posts.repositories.comment_repository import CommentRepository
+from apps.posts.repositories.post_repository import PostRepository
 from core.permissions import IsOwner
 
 
@@ -68,10 +67,7 @@ class PostDetailView(APIView):
         post_serializer = PostsSerializer(post)
         comment_serializer = CommentsSerializer(comments)
 
-        data = {
-            "post": post_serializer.data,
-            "comments": comment_serializer.data
-        }
+        data = {"post": post_serializer.data, "comments": comment_serializer.data}
 
         return Response(data, status=status.HTTP_200_OK)
 

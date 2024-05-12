@@ -1,5 +1,6 @@
 import logging
-from django.contrib.auth import get_user_model
+
+from django.contrib.auth import get_user_model, password_validation
 from django.contrib.auth.password_validation import validate_password
 from django.core.exceptions import ValidationError
 from rest_framework import serializers
@@ -7,7 +8,6 @@ from rest_framework.serializers import ValidationError
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
 from apps.accounts.repositories.user_repository import UserRepository
-from django.contrib.auth import password_validation
 
 User = get_user_model()
 
@@ -29,7 +29,6 @@ class UserAuthSerializer(serializers.ModelSerializer):
         if UserRepository.user_exists_by_username(value):
             raise serializers.ValidationError("This username is already in use.")
         return value
-
 
     def validate(self, data):
         if data["password1"] != data["password2"]:
@@ -84,10 +83,13 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
 
         return token
 
+
 class CheckResetUserPasswordEmailSerializer(serializers.Serializer):
     email = serializers.EmailField()
 
+
 logger = logging.getLogger(__name__)
+
 
 class PasswordResetConfirmSerializer(serializers.Serializer):
     new_password1 = serializers.CharField(required=True, write_only=True)
@@ -100,6 +102,8 @@ class PasswordResetConfirmSerializer(serializers.Serializer):
 
     def validate(self, data):
 
-        if data['new_password1'] != data['new_password2']:
-            raise serializers.ValidationError({"new_password2": "Password fields didn't match."})
+        if data["new_password1"] != data["new_password2"]:
+            raise serializers.ValidationError(
+                {"new_password2": "Password fields didn't match."}
+            )
         return data
