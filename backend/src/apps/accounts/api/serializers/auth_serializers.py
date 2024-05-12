@@ -30,7 +30,6 @@ class UserAuthSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError("This username is already in use.")
         return value
 
-
     def validate(self, data):
         if data["password1"] != data["password2"]:
             raise serializers.ValidationError(
@@ -84,10 +83,13 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
 
         return token
 
+
 class CheckResetUserPasswordEmailSerializer(serializers.Serializer):
     email = serializers.EmailField()
 
+
 logger = logging.getLogger(__name__)
+
 
 class PasswordResetConfirmSerializer(serializers.Serializer):
     new_password1 = serializers.CharField(required=True, write_only=True)
@@ -100,6 +102,8 @@ class PasswordResetConfirmSerializer(serializers.Serializer):
 
     def validate(self, data):
 
-        if data['new_password1'] != data['new_password2']:
-            raise serializers.ValidationError({"new_password2": "Password fields didn't match."})
+        if data["new_password1"] != data["new_password2"]:
+            raise serializers.ValidationError(
+                {"new_password2": "Password fields didn't match."}
+            )
         return data
