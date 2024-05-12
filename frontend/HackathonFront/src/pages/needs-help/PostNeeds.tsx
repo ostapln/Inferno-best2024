@@ -79,12 +79,12 @@ const PostNeeds = () => {
                                 <p className="text-sm font-bold  font-medium text-gray-900 truncate">Michael Gough</p>
                                 <p className="text-sm text-gray-500 truncate dark:text-gray-400">12.04.2024</p>
 
-                                <div className="mr-[5%] inline-flex items-center text-base font-semibold text-gray-900 border border-black rounded p-2">
+                                <div className="mr-[5%] inline-flex items-center px-5 text-[#1B4B8B] font-semibold text-[#1B4B8B] border border-[#1B4B8B] rounded p-2">
                                     <a href="#">Переглянути</a>
                                 </div> </div>
                              
                         </div>
-                    <div className="left-[53rem] relative mr-[5%] inline-flex items-center text-base font-semibold text-gray-900  ">
+                    <div className="left-[53rem] relative mr-[5%] inline-flex items-center text-[#1B4B8B] font-semibold text-gray-900  ">
                            <p className="text-sm text-gray-500 truncate dark:text-gray-400">12.04.2024</p>
                         </div>
                     </div>
@@ -96,10 +96,10 @@ const PostNeeds = () => {
                                 <p className="text-sm font-medium text-gray-900 truncate">Bonnie Green</p>
                                 <p className="text-sm text-gray-500 truncate dark:text-gray-400">12.04.2024</p>
                             </div>
-                            <div className="mr-[5%] inline-flex items-center text-base font-semibold text-gray-900 border border-black rounded p-2">
+                            <div className="mr-[5%] inline-flex items-center px-5 text-[#1B4B8B] font-semibold text-gray-900 border border-[#1B4B8B] rounded p-2">
                                 <a href="#">Переглянути</a>
                             </div>
-                        </div> <div className="left-[53rem] relative mr-[5%] inline-flex items-center text-base font-semibold text-gray-900  ">
+                        </div> <div className="left-[53rem] relative mr-[5%] inline-flex items-center text-base font-semibold text-[#1B4B8B]  ">
                            <p className="text-sm text-gray-500 truncate dark:text-gray-400">12.04.2024</p>
                         </div>
                     </div>
@@ -111,7 +111,7 @@ const PostNeeds = () => {
                                 <p className="text-sm font-medium text-gray-900 truncate">Michael Gough</p>
                                 <p className="text-sm text-gray-500 truncate dark:text-gray-400">12.04.2024</p>
                             </div>
-                            <div className="mr-[5%] inline-flex items-center text-base font-semibold text-gray-900 border border-black rounded p-2">
+                            <div className="mr-[5%] inline-flex items-center px-5 text-[#1B4B8B] font-semibold text-[#1B4B8B] border border-[#1B4B8B] rounded p-2">
                                 <a href="#">Переглянути</a>
                             </div>
                         </div> <div className="left-[53rem] relative mr-[5%] inline-flex items-center text-base font-semibold text-gray-900  ">
@@ -126,11 +126,11 @@ const PostNeeds = () => {
                                 <p className="text-sm font-medium text-gray-900 truncate">Thomas Lean</p>
                                 <p className="text-sm text-gray-500 truncate dark:text-gray-400">12.04.2024</p>
                             </div>
-                            <div className="border border-black mr-[5%] inline-flex items-center text-base font-semibold text-gray-900 rounded p-2">
+                            <div className="border border-black mr-[15%] px-5 inline-flex items-center text-[#1B4B8B] font-semibold text-[#1B4B8B] rounded p-2">
                                 <a href="#">Переглянути</a>
                             </div>
 
-                        </div> <div className="left-[53rem] relative mr-[5%] inline-flex items-center text-base font-semibold text-gray-900  ">
+                        </div> <div className="left-[53rem] relative mr-[5%] inline-flex items-center text-base font-semibold text-[#1B4B8B]  ">
                            <p className="text-sm text-gray-500 truncate dark:text-gray-400">12.04.2024</p>
                         </div>
                     </div>
