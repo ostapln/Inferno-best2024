@@ -26,12 +26,13 @@ export const storeToken = async (token:any) => {
   });
 };
  
-export const loadTokenFromStorage = () => {
+export const loadTokenFromStorage = async () => {
   console.log('loadTokenFromStorage token');
   
-  const token = getToken() as string;
+  let token = getToken() as any;
    http_api.defaults.headers['Authorization'] = token;
-  const user: IUser = jwtDecode(token);
+   const user = (await http_api.get<IUser>('/api/v1/users/me/', token)).data;
+     
   store.dispatch({
     type: AuthUserActionType.LOGIN_USER,
     payload: {
@@ -47,7 +48,7 @@ export const getToken = () => {
 const token =  localStorage.getItem('token')  ;
   console.log("dsad",token);
   
-  return token;
+  return token ? String(token) : '';
 };
 
 export const removeToken = () => {

@@ -28,7 +28,7 @@ const Login = () => {
 console.log("isAuth",isAuth );
       storeToken(result);
 
-      navigator('/userlayout');
+      navigator('/profile');
     }   catch (error: any) { // Вказання типу як any, або типу об'єкта помилки, якщо він відомий
       console.error('Error status code:', error.response?.status); // Вивести статус код помилки
        } finally {
