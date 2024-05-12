@@ -113,7 +113,7 @@ const CreateNeeds = () => {
               </div>
             </div>
 </div></form></div>
-      <a href="/reg" className="mx-5    w-[70%]   py-3 rounded-[20px] bg-[#C60914] border-[2px] border-[solid] border-[#FEFCF4]    text-center text-sm font-semibold text-black shadow-sm hover:bg-[#FEFCF4] hover:text-[#C60914] hover:border-[#C60914]   focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Опублікувати</a>
+      <a href="/userlayout/post" className="mx-5    w-[70%]   py-3 rounded-[20px] bg-[#C60914] border-[2px] border-[solid] border-[#FEFCF4]    text-center text-sm font-semibold text-black shadow-sm hover:bg-[#FEFCF4] hover:text-[#C60914] hover:border-[#C60914]   focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Опублікувати</a>
       </div>
 
 

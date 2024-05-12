@@ -1,6 +1,7 @@
 import { useState } from "react";
 import http_api from "../../services/http_api";
 import { getToken } from "../../services/tokenService";
+import { useNavigate } from "react-router-dom";
 
  
 
@@ -12,7 +13,7 @@ import { getToken } from "../../services/tokenService";
     password_1:string;
     password_2:string;
  }
-const Password = () => {
+const Password = () => {  const navigator = useNavigate();
     const [userData, setUserData] = useState<PasswordEdit>({
         token:'',
         password_1:'',
@@ -32,7 +33,7 @@ const Password = () => {
  
             const result = await http_api.patch('/api/v1/users/me/',userData);
               
- 
+ navigator('/profile');
           console.log('Profile deleted successfully',result);
         } catch (error) {
           console.error('Failed to delete profile', error);
@@ -65,7 +66,7 @@ const Password = () => {
                     </form>
                     <div className="flex flex-grow items-center justify-between py-4 px-20 md:px-6 2xl:px-11">
 
-                        <button onClick={handleSubmit} type="submit" className="  h-[Hug (72px)px] block  w-full my-12 px-[25px]   py-5 bg-[#1FF542] border-[2px] border-[solid] border-[#FEFCF4]   rounded-[4px] text-center text-sm font-semibold text-black   hover:bg-[#FEFCF4] hover:text-[#5BC0EB] hover:border-[#5BC0EB]   focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"><p className="text-[25px] ">Змінити пароль</p></button>
+                        <button onClick={handleSubmit} type="submit" className="  h-[Hug (72px)px] block  w-full my-12 px-[25px]   py-5 bg-[#1B4B8B] border-[2px] border-[solid] border-[#FEFCF4]   rounded-[4px] text-center text-sm font-semibold text-black   hover:bg-[#FEFCF4] hover:text-[#5BC0EB] hover:border-[#5BC0EB]   focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"><p className="text-[25px] ">Змінити пароль</p></button>
                     </div>
 
                 </div>

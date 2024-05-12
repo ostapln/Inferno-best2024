@@ -36,7 +36,7 @@ const Profile = () => {
                    
               </div>
                   <div className="flex flex-col  top-[70px] left-[47%]"> <img
-                      className="rounded-full w-40 h-40"
+                      className="bg-black rounded-full w-40 h-40"
                       src={user?.photo}
                       alt=""
                   />

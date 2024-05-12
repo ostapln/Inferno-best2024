@@ -63,9 +63,9 @@ const PostNeeds = () => {
                 {/* Кнопка */}
                 <div className="relative flex w-[400px] mx-4">
                     <button
-                        className="h-[Hug (72px)px] block w-full py-2 bg-[#C60914] border-[2px] border-[solid] border-[#FEFCF4] rounded-[10px] text-center text-sm font-semibold text-black hover:bg-[#FEFCF4] hover:text-[#5BC0EB] hover:border-[#5BC0EB] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                        className="h-[Hug (72px)px] block w-full py-2 bg-[#C60914] border-[2px] border-[solid] border-[#FEFCF4] rounded-[10px] text-center text-sm font-semibold text-black hover:bg-[#FEFCF4] hover:text-[#C60914] hover:border-[#C60914] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                     >
-                        <p className="text-[25px]">повідомити про зникнення</p>
+                        <a href='/userlayout' className="text-[25px]">повідомити про зникнення</a>
                     </button>
                 </div>
 

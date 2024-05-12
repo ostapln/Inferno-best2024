@@ -21,7 +21,7 @@ return(
 <div className="mx-5  w-full bg-[white]">
 
     <h1 className="text-left font-bold  mt-10  text-black text-[33px]">Степаненко Іван Михайлович</h1>
-    <a href="/" className="relative right-36  w-[17rem] inline-block   px-4 my-10 py-3 rounded-[20px] bg-[#1B4B8B] border-[2px] border-[solid] border-[#FEFCF4] text-center text-sm font-semibold text-white shadow-sm hover:bg-[#FEFCF4] hover:text-[#1B4B8B] hover:border-[#1B4B8B] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">херсонська область</a>
+    <a href="" className="relative right-36  w-[17rem] inline-block   px-4 my-10 py-3 rounded-[20px] bg-[#1B4B8B] border-[2px] border-[solid] border-[#FEFCF4] text-center text-sm font-semibold text-white shadow-sm hover:bg-[#FEFCF4] hover:text-[#1B4B8B] hover:border-[#1B4B8B] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">херсонська область</a>
 
 <h3 className="text-left font-bold">Опис</h3>
     <p className="text-left">Lorem ipsum dolor sit amet consectetur. Consectetur dui donec enim ultrices egestas id. Cras praesent mi faucibus ultricies diam. In augue fermentum ac gravida justo in vitae volutpat. Volutpat viverra ultrices orci porta. Amet lorem a auctor netus leo tortor nunc convallis. At ornare bibendum tortor urna sit nec. Amet duis elit id donec quis augue porta varius ornare. Nibh bibendum pellentesque eu nisi est sed semper. Metus nunc lacus enim gravida risus justo purus elementum pharetra.</p>
