@@ -1,5 +1,6 @@
 from apps.posts.models import Comments
 
+
 class CommentRepository:
     @staticmethod
     def get_comments_by_user(user):

@@ -1,13 +1,17 @@
 import logging
-from django.core.mail import send_mail
+
 from django.conf import settings
-from django.template.loader import render_to_string
-from django.utils.http import urlsafe_base64_encode
-from django.utils.encoding import force_bytes
 from django.contrib.sites.shortcuts import get_current_site
-from .tokens import EmailTokenGenerator
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
+from django.utils.encoding import force_bytes
+from django.utils.http import urlsafe_base64_encode
 from rest_framework.request import Request
+
 from apps.accounts.models import User
+
+from .tokens import EmailTokenGenerator
+
 
 def _send_verification_email(request: Request, user: User) -> None:
     subject = 'Activate Your Account'

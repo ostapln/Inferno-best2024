@@ -1,6 +1,6 @@
 import os
-from config.components.boilerplate import BASE_DIR
 
+from config.components.boilerplate import BASE_DIR
 
 TEMPLATES = [
     {

@@ -1,5 +1,6 @@
 import logging
-from django.contrib.auth import get_user_model
+
+from django.contrib.auth import get_user_model, password_validation
 from django.contrib.auth.password_validation import validate_password
 from django.core.exceptions import ValidationError
 from rest_framework import serializers
@@ -7,7 +8,6 @@ from rest_framework.serializers import ValidationError
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
 from apps.accounts.repositories.user_repository import UserRepository
-from django.contrib.auth import password_validation
 
 User = get_user_model()
 
