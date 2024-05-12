@@ -2,12 +2,20 @@
 import { Outlet } from 'react-router-dom';
 import { IAuthUser } from '../../store/reducers/auth/types';
 import Header from '../header/Header';
- const Profile = () => {
+import { getToken } from '../../services/tokenService';
+import axios from 'axios';
+import http_api from '../../services/http_api';
+
+const Profile = () => {
     const {   user } = useSelector((store: any) => store.auth as IAuthUser);
     const handleDeleteProfile = async () => {
         try {
-        // Викликаємо функцію для видалення профілю з бекенду
-          console.log('Profile deleted successfully');
+            let token: any ;token =getToken();
+            console.log("log ", token);
+            const result = await axios.delete('/api/v1/users/delete-account/',token);
+              
+ 
+          console.log('Profile deleted successfully',result);
         } catch (error) {
           console.error('Failed to delete profile', error);
         }
@@ -43,10 +51,9 @@ import Header from '../header/Header';
                   <div className="w-96 my-10">   <a    href='/profile/password' className=" w-[267px] mt-12   mt-12 px-8 py-2 bg-[#E54B4B] border-[2px] border-white    rounded-[4px] text-center text-sm font-semibold text-white  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Змінити пароль</a>
 
                   <a  href="#"
-        onClick={(e) => {
-          e.preventDefault();  
-          handleDeleteProfile(); 
-        }}  className="mt-12 font-medium text-[20px] mx-4 text-black-600 underline dark:text-black-500 hover:no-underline">Видалити профіль</a>  
+        onClick={ 
+          handleDeleteProfile } 
+          className="mt-12 font-medium text-[20px] mx-4 text-black-600 underline dark:text-black-500 hover:no-underline">Видалити профіль</a>  
 
                   </div> 
                  

@@ -10,6 +10,9 @@ import HomePage from './pages/home/HomePage'
 import { Profile } from './pages/profile/Profile'
 import Settings from './pages/profile/settings/Settings'
 import HistoryProfile from './pages/profile/history/HistoryProfile'
+import Password from './pages/profile/Password'
+import UserLayout from './layouts/UserLayout'
+import CreateNeeds from './pages/needs-help/CreateNeeds'
  
 function App() {
  
@@ -50,9 +53,11 @@ function App() {
          <Route path="/profile" element={<Profile />}   >
          <Route index element={<Settings />}   />
          <Route path="/profile/history" element={<HistoryProfile />} />
-          {/* <Route path="/profile/password" element={<Password />} /> */}
+          <Route path="/profile/password" element={<Password />} />
          </Route>
-  
+         <Route path="/userlayout" element={<UserLayout />}   >
+         <Route index element={<CreateNeeds />}   />
+         </Route>
       </Routes>
     </div>
     </>
