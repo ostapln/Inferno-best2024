@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  telegram-bot:
+    build: ./bot 
+    ports:
+      - "5000:5000"  
+    environment:
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - JWT_TOKEN=${JWT_TOKEN}
+    volumes:
+      - ./bot:/usr/src/app  
+
+  parser:
+    build: ./parser 
+    ports:
+      - "5001:5000"  
+    environment:
+      - JWT_TOKEN=${JWT_TOKEN}
+    volumes:
+      - ./parser:/usr/src/app 
