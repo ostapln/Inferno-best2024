@@ -1,0 +1,6 @@
+beautifulsoup4
+requests
+flask
+APScheduler
+python-telegram-bot
+python-dotenv
