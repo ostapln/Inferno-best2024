@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 import { IAuthUser } from '../../store/reducers/auth/types';
 import Header from '../header/Header';
  const Profile = () => {
-    const { isAuth,user } = useSelector((store: any) => store.auth as IAuthUser);
+    const {   user } = useSelector((store: any) => store.auth as IAuthUser);
     const handleDeleteProfile = async () => {
         try {
         // Викликаємо функцію для видалення профілю з бекенду
@@ -34,7 +34,7 @@ import Header from '../header/Header';
                   />
 
                       {/* channel info */}
-                      <div className="text">
+                      <div  >
                           {/* Channel title */}
                           <h1 className="text-black text-left font-bold my-8  text-3xl mb-2">{user?.username}</h1>
 
