@@ -14,6 +14,7 @@ import Password from './pages/profile/Password'
 import UserLayout from './layouts/UserLayout'
 import CreateNeeds from './pages/needs-help/CreateNeeds'
 import PostNeeds from './pages/needs-help/PostNeeds'
+import NeedsHelps from './pages/needs-help/NeedsHelps'
  
 function App() {
  
@@ -58,9 +59,11 @@ function App() {
          </Route>
          <Route path="/userlayout" element={<UserLayout />}   >
          <Route index element={<CreateNeeds />}   />
-         PostNeeds
+ 
          <Route path="/userlayout/post" element={<PostNeeds />} />
-         </Route>
+      
+
+         </Route>   <Route path="/needs" element={<NeedsHelps />} />
       </Routes>
     </div>
     </>

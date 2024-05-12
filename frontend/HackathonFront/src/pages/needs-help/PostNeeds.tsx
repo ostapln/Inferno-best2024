@@ -80,7 +80,7 @@ const PostNeeds = () => {
                                 <p className="text-sm text-gray-500 truncate dark:text-gray-400">12.04.2024</p>
 
                                 <div className="mr-[5%] inline-flex items-center px-5 text-[#1B4B8B] font-semibold text-[#1B4B8B] border border-[#1B4B8B] rounded p-2">
-                                    <a href="#">Переглянути</a>
+                                    <a href="/needs">Переглянути</a>
                                 </div> </div>
                              
                         </div>
@@ -97,7 +97,7 @@ const PostNeeds = () => {
                                 <p className="text-sm text-gray-500 truncate dark:text-gray-400">12.04.2024</p>
                             </div>
                             <div className="mr-[5%] inline-flex items-center px-5 text-[#1B4B8B] font-semibold text-gray-900 border border-[#1B4B8B] rounded p-2">
-                                <a href="#">Переглянути</a>
+                                <a href="/needs">Переглянути</a>
                             </div>
                         </div> <div className="left-[53rem] relative mr-[5%] inline-flex items-center text-base font-semibold text-[#1B4B8B]  ">
                            <p className="text-sm text-gray-500 truncate dark:text-gray-400">12.04.2024</p>
@@ -112,7 +112,7 @@ const PostNeeds = () => {
                                 <p className="text-sm text-gray-500 truncate dark:text-gray-400">12.04.2024</p>
                             </div>
                             <div className="mr-[5%] inline-flex items-center px-5 text-[#1B4B8B] font-semibold text-[#1B4B8B] border border-[#1B4B8B] rounded p-2">
-                                <a href="#">Переглянути</a>
+                                <a href="/needs ">Переглянути</a>
                             </div>
                         </div> <div className="left-[53rem] relative mr-[5%] inline-flex items-center text-base font-semibold text-gray-900  ">
                            <p className="text-sm text-gray-500 truncate dark:text-gray-400">12.04.2024</p>
