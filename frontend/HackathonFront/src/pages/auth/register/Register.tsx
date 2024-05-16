@@ -37,7 +37,7 @@ const Register =()=>{
       storeToken(result );
  
      
-      navigator('/');
+      navigator('/log');
     } catch (error) {
      
     } finally {
